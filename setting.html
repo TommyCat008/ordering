@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>资料设置</title>
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/user.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="home">
+    <div class="person_data">
+        <div class="portrait_text clear">
+            <div class="protrait fl">
+                <img src="http://thirdwx.qlogo.cn/mmopen/vi_32/qdS6u66jHHibCACPDiaSlSlo31HZFlF0StJnXtsySVgMeYBwJx2ibakjlt55RHuk5E7XfJicT2HicUP6899J1CObPEA/132"
+                />
+            </div>
+        </div>
+        <div class="text clear">
+            <span class="fl">昵称</span>
+            <input type="text" class="txt fr" placeholder="您的昵称" value="" />
+        </div>
+        <div class="text clear">
+            <span class="fl">地区</span>
+            <input type="text" class="txt fr" placeholder="所在地区" value="" />
+        </div>
+        <div class="text clear">
+            <span class="fl">邮箱</span>
+            <input type="text" class="txt fr" placeholder="您的邮箱" value="" />
+        </div>
+        <div class="text clear">
+            <span class="fl">手机号</span>
+            <input type="text" class="txt fr" placeholder="您的手机号码" value="" />
+        </div>
+        <div class="text clear share_btn">
+            <span>分享西游计</span>
+            <i class="icon"></i>
+        </div>
+    </div>
+    <div class="p_btn_box">
+        <a href="javascript:;" class="p_btn">退出登录</a>
+    </div>
+    <!-- 分享到 -->
+    <!-- <div class="share"><h3>分享到</h3><ul class="share_list clear"><li><a href="javascript:;"><div class="pic"><img src="/JGsat/Tpl/User/Default/Public/images/share_pic1.png" alt="" /></div><p>新浪微博</p></a></li><li><a href="javascript:;"><div class="pic"><img src="/JGsat/Tpl/User/Default/Public/images/share_pic2.png" alt="" /></div><p>微信好友</p></a></li><li><a href="javascript:;"><div class="pic"><img src="/JGsat/Tpl/User/Default/Public/images/share_pic3.png" alt="" /></div><p>微信朋友圈</p></a></li><li><a href="javascript:;"><div class="pic"><img src="/JGsat/Tpl/User/Default/Public/images/share_pic4.png" alt="" /></div><p>QQ好友</p></a></li><li><a href="javascript:;"><div class="pic"><img src="/JGsat/Tpl/User/Default/Public/images/share_pic5.png" alt="" /></div><p>QQ空间</p></a></li></ul><div class="cancle_box"><a href="javascript:;" class="cancle share_cancel">取消</a></div></div> -->
+    <div class="mask" style="background:url(./images/share_bg.png);background-size: cover;"></div>
+</body>
+
+</html>
+<script type="text/javascript">
+    /*分享按钮*/
+    (function () {
+        var $shareBtn = $(".share_btn");
+        var $mask = $(".mask");
+        $shareBtn.click(function () {
+            $mask.show();
+        });
+        $mask.click(function () {
+            $mask.hide();
+        });
+    })();
+
+</script>

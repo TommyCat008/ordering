@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>支付页面</title>
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/other.css" />
+</head>
+
+<body class="home" style="background:#eee;">
+    <style type="text/css">
+        .detail_info .info_collection.cha_sb_padding {
+            padding: 15px 10px;
+        }
+
+        .detail_info h2.sb_detail_info_h2 {
+            width: 100%;
+            min-height: 0;
+        }
+
+        .cha_sb_reserve_info .text {
+            padding: 0 10px;
+        }
+
+        .font_gray {
+            color: #666 !important;
+        }
+
+        .cha_sb_address {
+            max-width: 80%;
+        }
+
+        .sb_agree {
+            height: 40px;
+            line-height: 40px;
+            background: #f7e2c4;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .cha_sb_limit {
+            padding-bottom: 50px;
+        }
+
+        .cha_pay_now {
+            width: 100%;
+            position: fixed;
+            bottom: 0px;
+            left: 0;
+        }
+
+        .cha_pay_now .p_btn {
+            border-radius: 0px;
+        }
+
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./scripts/index.js"></script>
+    <script type="text/javascript">
+        //调用微信JS api 支付
+        function jsApiCall() {
+            WeixinJSBridge.invoke(
+                'getBrandWCPayRequest', {
+                    "appId": "wx8fd00465755bc8bc",
+                    "nonceStr": "nxr33mkwli7si09vqirj7e87ahu202x6",
+                    "package": "prepay_id=wx2018030415301841cc159f0f0901517095",
+                    "signType": "MD5",
+                    "timeStamp": "1520148617",
+                    "paySign": "4E20B9278A1424F31572BA1B55DA6929"
+                },
+                function (res) {
+                    WeixinJSBridge.log(res.err_msg);
+
+                    if (res.err_msg == "get_brand_wcpay_request:ok") {
+                        var url = "/index.php?g=User&m=Order&a=pay_ok" + "&oid=20450&sn=2018030454102485";
+                        window.location.href = url;
+                    }
+                }
+            );
+        }
+
+        function callpay() {
+            if (typeof WeixinJSBridge == "undefined") {
+                alert('null');
+                if (document.addEventListener) {
+                    document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent('WeixinJSBridgeReady', jsApiCall);
+                    document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+                }
+            } else {
+                jsApiCall();
+            }
+        }
+
+    </script>
+    <div class="cha_sb_limit">
+        <div class="detail_banner P_width">
+            <a href="javascript:;">
+                <img src="./images/57de496852549.jpg" />
+            </a>
+        </div>
+        <div class="detail_info">
+            <div class="info_collection cha_sb_padding clear">
+                <h2 class="fl sb_detail_info_h2" style='min-height:auto'>心斋桥顶级黑毛和牛 牛舌专门料理</h2>
+            </div>
+        </div>
+        <div class="reserve_info cha_sb_reserve_info p_bg">
+            <div class="text clear" style="display: none;">
+                <span class="fl sb_left">套餐费
+                    <i class="font_gray">（人民币）</i>
+                </span>
+                <em class="fr sb_right">￥180.00 CNY</em>
+            </div>
+            <div class="text clear">
+                <span class="fl sb_left">预订费
+                    <i class="font_gray">（人民币）</i>
+                </span>
+                <em class="fr sb_right">￥10 CNY</em>
+            </div>
+            <div class="text clear no_sb_border_bottom">
+                <span class="fl sb_left font_gray">用餐时间</span>
+                <em class="fr sb_right">2018-03-09(以实际安排为准)</em>
+            </div>
+            <div class="text clear no_sb_border_bottom">
+                <span class="fl sb_left font_gray">预订人</span>
+                <em class="fr sb_right">账号后</em>
+            </div>
+            <div class="text clear no_sb_border_bottom">
+                <span class="fl sb_left font_gray">人数</span>
+                <em class="fr sb_right">1</em>
+            </div>
+            <div class="text clear no_sb_border_bottom">
+                <span class="fl sb_left font_gray">地址</span>
+                <em class="fr sb_right cha_sb_address overflow">大阪府大阪市中央区東心斎橋2-7-11 平和ビル 1F</em>
+            </div>
+        </div>
+        <div class="sb_agree">您已同意预定及退订相关条款说明</div>
+    </div>
+    <div class="cha_pay_now">
+        <a href="javascript:;" onclick="callpay()" class="p_btn booking_now">立即支付</a>
+    </div>
+</body>
+
+</html>

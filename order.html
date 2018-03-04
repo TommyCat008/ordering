@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>我的订单</title>
+    <!-- <link rel="stylesheet" href="http://www.ourtastytravel.com/JGsat/Tpl/User/Default/Public/css/public.css" /> -->
+    <!-- <link rel="stylesheet" href="http://www.ourtastytravel.com/JGsat/Tpl/User/Default/Public/css/other.css" /> -->
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/user.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="home">
+    <ul class="order_choose clear">
+        <li class="active">
+            <a href="">全部订单</a>
+        </li>
+        <li>
+            <a href="">预订中</a>
+        </li>
+        <li>
+            <a href="">预订成功</a>
+        </li>
+        <li>
+            <a href="">预订失败</a>
+        </li>
+    </ul>
+    <div class="order_box sb_padding_bottom">
+        <ul class="pro_list">
+            <li>
+                <div class="sb_border_bottom clear">
+                    <div class="pic fl">
+                        <a href="">
+                            <img src="./images/57de496852549.jpg" alt="" />
+                        </a>
+                    </div>
+                    <div class="info fl">
+                        <a href="/index.php?g=User&m=Order&a=pay_ck&id=20450">
+                            <h3 class="overflow">心斋桥顶级黑毛和牛 牛舌专门料理</h3>
+                            <strong>￥550元/人</strong>
+                        </a>
+                        <p class="extra clear">
+                            <span class="fl overflow">心斋桥</span>
+                            <em class="fr order_edit"></em>
+                        </p>
+                    </div>
+                </div>
+                <div class="order_cancle">
+                    <span id="xt" style="display: none">1</span>
+                    <span id="xx" style="display: none">20450</span>
+                </div>
+            </li>
+            <div class="ccc"></div>
+        </ul>
+    </div>
+    <div class="p_recommend p_bg">
+        <h4 class="p_sign_title">
+            更多推荐
+        </h4>
+        <ul class="list clear">
+            <li>
+                <div class="pic">
+                    <a href="/index.php?m=Product&a=show&id=73">
+                        <img src="./images/57de496852549.jpg" alt="" />
+                    </a>
+                </div>
+                <a href="/index.php?m=Product&a=show&id=73">
+                    <h3 class="overflow">心斋桥顶级黑毛和牛 牛舌专门料理</h3>
+                    <label></label>
+                    <strong>￥550/人</strong>
+                </a>
+            </li>
+            <li>
+                <div class="pic">
+                    <a href="/index.php?m=Product&a=show&id=43">
+                        <img src="./images/57de496852549.jpg" alt="" />
+                    </a>
+                </div>
+                <a href="/index.php?m=Product&a=show&id=43">
+                    <h3 class="overflow">米其林推荐：东京小巷邂逅风味荞麦面 唇舌共享丝滑</h3>
+                    <label></label>
+                    <strong>￥55/人</strong>
+                </a>
+            </li>
+            <li>
+                <div class="pic">
+                    <a href="/index.php?m=Product&a=show&id=44">
+                        <img src="./images/57de496852549.jpg" alt="" />
+                    </a>
+                </div>
+                <a href="/index.php?m=Product&a=show&id=44">
+                    <h3 class="overflow">感受诚意满满的荞麦拉面</h3>
+                    <label></label>
+                    <strong>￥65/人</strong>
+                </a>
+            </li>
+            <li>
+                <div class="pic">
+                    <a href="/index.php?m=Product&a=show&id=45">
+                        <img src="./images/57de496852549.jpg" alt="" />
+                    </a>
+                </div>
+                <a href="/index.php?m=Product&a=show&id=45">
+                    <h3 class="overflow">银座老店传承着传统味道的天妇罗</h3>
+                    <label>天一</label>
+                    <strong>￥1500/人</strong>
+                </a>
+            </li>
+            <li>
+                <div class="pic">
+                    <a href="/index.php?m=Product&a=show&id=46">
+                        <img src="./images/57de496852549.jpg" alt="" />
+                    </a>
+                </div>
+                <a href="/index.php?m=Product&a=show&id=46">
+                    <h3 class="overflow">牛庵顶级神户牛肉</h3>
+                    <label></label>
+                    <strong>￥900/人</strong>
+                </a>
+            </li>
+            <li>
+                <div class="pic">
+                    <a href="/index.php?m=Product&a=show&id=110">
+                        <img src="./images/57de496852549.jpg" alt="" />
+                    </a>
+                </div>
+                <a href="/index.php?m=Product&a=show&id=110">
+                    <h3 class="overflow">银座和牛铁板烧 全球十二大最佳牛排餐厅</h3>
+                    <label></label>
+                    <strong>￥1000/人</strong>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- 底部导航 -->
+    <ul id="footer_nav">
+        <li>
+            <a href="./index.html">
+                <span class="footer_icon icon1"></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li class="active">
+            <a href="./order.html">
+                <span class="footer_icon icon2"></span>
+                <p>订单</p>
+            </a>
+        </li>
+        <li>
+            <a href="./likes.html">
+                <span class="footer_icon icon3"></span>
+                <p>喜欢</p>
+            </a>
+        </li>
+        <li>
+            <a href="./user.html">
+                <span class="footer_icon icon4"></span>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+    <!-- 底部导航结束 -->
+</body>
+
+</html>

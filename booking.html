@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>预定详情</title>
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/other.css" />
+</head>
+
+<body class="home" style="background:#f6f6f6;">
+    <div class="reserve">
+        <ul class="pro_list" style="padding:0 0 0 0;">
+            <li>
+                <a href="javascript:;" class="clear">
+                    <div class="pic fl">
+                        <img src="./images/57de496852549.jpg" />
+                    </div>
+                    <div class="info fl">
+                        <h3>心斋桥顶级黑毛和牛 牛舌专门料理</h3>
+                        <p class="extra clear xt">
+                            <span class="fl overflow">￥550/人</span>
+                            <em class="fr overflow">心斋桥</em>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <form action="" method="post" id='done'>
+        <input type="hidden" name="pid" value="73">
+        <input type="hidden" name="price" value="550">
+        <div class="reserve_info p_bg">
+            <div class="text clear sb_calendar">
+                <span class="fl">预定日期</span>
+                <i class="icon1 fr"></i>
+                <strong class="fr">(当地时间)</strong>
+                <input type="text" id="my-input" class="date fr" readonly name="date" value="2018-03-04" />
+            </div>
+            <div class="text sb_text clear">
+                <span class="fl">用餐人数</span>
+                <div class="reserve_num fr">
+                    <input type="button" value="" class="minu" />
+                    <label class='num'>1</label>
+                    <input type="hidden" value="1" id='num' name="num" />
+                    <input type="button" value="" class="add" />
+                </div>
+                <em class="cha_limit_people">上限6人</em>
+            </div>
+            <div class="text clear">
+                <span class="fl">用餐时间</span>
+                <div class="radio fr radio1">
+                    <p class="fr">
+                        <i class="icon"></i>
+                        <em>晚餐</em>
+                        <input class="time" type="radio" value="2" name="time" style="display: none;" />
+                    </p>
+                    <p class="fr active">
+                        <i class="icon"></i>
+                        <em>午餐</em>
+                        <input class="time" type="radio" value="1" name="time" checked="" style="display: none;" />
+                    </p>
+                </div>
+            </div>
+            <div class="text clear">
+                <span class="fl">手机号</span>
+                <input type="text" class="txt fr" name="mobile" id="moblie" />
+            </div>
+            <div class="text clear">
+                <span class="fl">邮箱</span>
+                <input type="text" class="txt fr" name="mail" id='mail' />
+            </div>
+            <div class="text clear">
+                <span class="fl">预订人</span>
+                <input type="text" placeholder="您的姓名" class="txt fr" name="name" id="name" />
+            </div>
+            <div class="text clear">
+                <span class="fl">称呼</span>
+                <div class="radio fr radio2">
+                    <p class="fr">
+                        <i class="icon"></i>
+                        <em class="">女士</em>
+                        <input class="sex" type="radio" value="2" name="sex" style="display: none;" />
+                    </p>
+                    <p class="fr active">
+                        <i class="icon"></i>
+                        <em class="">先生</em>
+                        <input class="sex" type="radio" value="1" name="sex" checked="" style="display: none;" />
+                    </p>
+                </div>
+            </div>
+            <div class="text clear">
+                <span class="fl">用餐备注</span>
+                <input type="text" placeholder="忌口，是否需要包间，有无小孩等" class="txt fr" name="bz" />
+            </div>
+            <div class="text clear" style="display: none;">
+                <span class="fl sb_left">套餐费</span>
+                <em class="fr sb_right">￥200/人</em>
+            </div>
+            <div class="text clear">
+                <span class="fl sb_left">预订费</span>
+                <em class="fr sb_right">￥10.00/人</em>
+                <input type="hidden" name="ydf" value="10.00" />
+            </div>
+            <div class="text clear no_border_bottom">
+                <span class="fl sb_left">付款方式</span>
+                <em class="fr sb_right">微信支付</em>
+            </div>
+        </div>
+        <div class="cha_extra">
+            <div class="agree clear">
+                <span class="icon"></span>
+                <em>同意
+                    <a href="javascript:;" class="font_red">预定须知、退订政策</a>以及
+                    <a href="javascript:;" class="font_red">服务条款</a>
+                </em>
+            </div>
+        </div>
+        <div class="cha_warn">
+            <strong>预定须知：</strong>
+            <p>1.就餐当天
+                <em class="font_red">请勿迟到</em>，请提前10分钟到点较为适宜。</p>
+            <p>2.到店后请出示“我的订单”里的“就餐凭证”以便商家与您确认预订信息。</p>
+            <p>3.用餐及酒水、饮料消费用餐完毕后须在店面支付。。</p>
+            <p>4.如有支付押金，用餐后请索取支付小票，并拍照与客服联系。</p>
+            <p>5.待审核后，
+                <em class="font_red">押金将在7个工作日内按原支付方式退还到您的账户中。</em>
+            </p>
+            <p>6.为了您的信誉，如需取消预订，请与客服联系。</p>
+            <p>7.预订一旦成功，无论是否取消预订，预订费将不退回。</p>
+        </div>
+        <div class="p_btn_box">
+            <a href="./pay.html" class="p_btn booking_now">立即预定</a>
+        </div>
+    </form>
+    <!-- 弹窗 -->
+    <div class="booking_success_box">
+        <div class="booking_success">
+            <h2>您的订单已提交</h2>
+            <p>我们将在1-2个工作日作出反馈，请留意</p>
+        </div>
+        <div class="close"></div>
+    </div>
+    <div class="mask"></div>
+    <!-- <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script> -->
+    <!-- <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script> -->
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script> -->
+    <script type="text/javascript" src="./scripts/index.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            (function () {
+                var $agree = $(".agree");
+                var $span = $agree.find("span");
+                $agree.click(function () {
+                    if ($span.hasClass("active")) {
+                        $span.removeClass("active");
+                    } else {
+                        $span.addClass("active");
+                    }
+                });
+            })();
+        })
+
+    </script>
+    <!--弹窗结束-->
+    <script type="text/javascript">
+        $(".p_btn").click(function () {
+            var moblie = $("#moblie").val();
+            var mail = $("#mail").val();
+            var name = $("#name").val();
+            var $agree = $(".agree");
+            var $span = $agree.find("span");
+            if ($span.hasClass("active")) {} else {
+                alert("请阅读预定须知、退订政策以及服务条款！")
+                return false;
+            }
+            if ($.trim(moblie) == '' || !(/^1[3|4|5|7|8]\d{9}$/.test(moblie))) {
+                alert("手机号码有误，请重填");
+                $("#moblie").focus();
+                return false;
+            }
+            if ($.trim(name) == '') {
+                alert("请填写您的姓名");
+                $("#name").focus();
+                return false;
+            }
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url: "/index.php?g=Home&m=Index&a=done",
+                data: $('#done').serialize(), // 你的formid
+                async: false,
+                error: function (request) {
+                    alert("参数有误,请重试");
+                },
+                success: function (data) {
+                    if (data > 10) {
+                        var url = "/index.php?g=User&m=Order&a=pay&oid=" + data;
+                        window.location.href = url;
+                    } else if (data == '2') {
+                        alert('只能预订5天以后的时间');
+                    } else {
+                        alert('参数有误,请重试');
+                    }
+                }
+            });
+        })
+        /*默认日期为当天*/
+        // $("#my-input").calendar({
+        //     value: ["2018-03-04"]
+        // });
+        $(".close").click(function () {
+            var url = "/index.php?g=User&m=Order&a=index";
+            window.location.href = url;
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./css/public.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link href="https://cdn.bootcss.com/Swiper/4.1.6/css/swiper.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/Swiper/4.1.6/js/swiper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <title>西游计</title>
+    <meta name="keywords" content="西游计" />
+    <meta name="description" content="西游计" />
+
+</head>
+
+<body class="home" style="background:#f6f6f6;">
+    <!-- 共用头部 -->
+    <div id="top">
+        <div class="header">
+            <div class="city clear">
+                <strong class="fl sb_get_hot select_show select_gr" id="gr_zone_ids" data-id="130100">城市</strong>
+                <span class="icon_com icon1 fl"></span>
+            </div>
+            <form action="/index.php?" method="get">
+                <div class="search_box clear">
+                    <span class="icon2 fl"></span>
+                    <input type="text" class="txt fl" placeholder="输入美食名称、地点" name="keyword" />
+                </div>
+                <input type="hidden" name="m" value="Search" />
+                <input type="hidden" name="sx" value="c" />
+            </form>
+            <script type="text/javascript">
+                $(".icon2").click(function () {
+                    $("form").submit();
+                })
+            </script>
+            <!-- <a href="/index.php?g=User&m=Login&a=index" class="icon3"></a> -->
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="banner P_width">
+        <div class="swiper-container swiper_banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="./images/57c95646575a6.jpg" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="./images/58a6b6c50d217.jpg" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="./images/5832de14932f7.jpg" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="./images/58135080bb833.jpg" />
+                    </a>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <!-- 导航 -->
+    <style>
+        .nav li {
+            width: 33.3%
+        }
+
+        .nav li a img {
+            width: 50px
+        }
+
+    </style>
+    <ul class="nav clear p_bg">
+        <li>
+            <a href="./common.html?type=1">
+                <img src="./images/i_pic1.png" alt="最新" />
+                <p>最新</p>
+            </a>
+        </li>
+        <li>
+            <a href="./common.html?type=2">
+                <img src="./images/i_pic2.png" alt="最热" />
+                <p>最热</p>
+            </a>
+        </li>
+        <li>
+            <a href="./common.html?type=3">
+                <img src="./images/i_pic3.png" alt="推荐" />
+                <p>推荐</p>
+            </a>
+        </li>
+    </ul>
+    <!-- 美食 -->
+    <div class="section_wrap">
+        <div class="i_section i_section1">
+            <div class="p_center">
+                <div class="p_caption clear">
+                    <a href="./choiceness.html">
+                        <h2 class="fl">TASTY米其林精选</h2>
+                        <span class="icon2 fl"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="i_pic">
+                <a href="./common.html">
+                    <img src="./images/58a6a3964fa10.jpg" />
+                </a>
+            </div>
+        </div>
+        <div class="swiper-container i_section i_section2 iscroll_1">
+            <div class="swiper-wrapper i_scroll_1 clear ul_width1">
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">199</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/58a6c5b475d99.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">大阪米其林一星和牛寿喜锅 北村</p>
+                                    <strong>￥800/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">大阪心斋桥</p>
+                                    <em>613人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">502</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/58a6bc39ca643.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">神户米其林牛肉铁板烧 雪月花</p>
+                                    <strong>￥900/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">神户中央区</p>
+                                    <em>499人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">311</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/589d7157c36a4.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">入选米其林指标的京都老店 鸟弥三料亭料理</p>
+                                    <strong>￥1000/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">京都府</p>
+                                    <em>929人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">237</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/58a6c7a24fc3f.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">一饭三吃札幌的鳗鱼店</p>
+                                    <strong>￥330/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">北海道札幌</p>
+                                    <em>816人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">533</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/58a6c8e8f2a8f.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">怀石料理中的极度细腻 山路</p>
+                                    <strong>￥1000/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">东京银座</p>
+                                    <em>956人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 旅游 -->
+    <div class="section_wrap i_section_top">
+        <div class="i_section i_section1">
+            <div class="p_center">
+                <div class="p_caption clear">
+                    <a href="./choiceness.html">
+                        <h2 class="fl">TASTY京都精选</h2>
+                        <span class="icon2 fl"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="i_pic">
+                <a href="./common.html">
+                    <img src="./images/5832d925960b1.jpg" />
+                </a>
+            </div>
+        </div>
+        <div class="swiper-container i_section i_section2 iscroll_1">
+            <div class="swiper-wrapper i_scroll_1 clear ul_width1">
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">145</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831c21d00dec.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">岚亭中赏古意情怀 京都怀石抚平焦躁时光</p>
+                                    <strong>￥650/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">下京区</p>
+                                    <em>316人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">148</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5833a779d0d58.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">平民价格食出怀石料理的艺术美学</p>
+                                    <strong>￥650/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">京都</p>
+                                    <em>315人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">243</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/58a6ccf919e02.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">古典气质的传统烤肉店 弘</p>
+                                    <strong>￥390/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">京都府</p>
+                                    <em>630人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">160</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831c852e981d.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">融入创新元素的京都怀石料理 </p>
+                                    <strong>￥520/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">京都中京区</p>
+                                    <em>609人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">147</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831c8ed1b008.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">于古都品尝禅意牛怀石料理</p>
+                                    <strong>￥650/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">京都中京区</p>
+                                    <em>558人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 东京精选 -->
+    <div class="section_wrap i_section_top">
+        <div class="i_section i_section1">
+            <div class="p_center">
+                <div class="p_caption clear">
+                    <a href="">
+                        <h2 class="fl">TASTY东京精选</h2>
+                        <span class="icon2 fl"></span>
+                    </a>
+                </div>
+            </div>
+            <div class="i_pic">
+                <a href="">
+                    <img src="./images/5832d861ed888.jpg" />
+                </a>
+            </div>
+        </div>
+        <div class="swiper-container i_section i_section2 iscroll_1">
+            <div class="swiper-wrapper i_scroll_1 clear ul_width1">
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">154</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831c9aac156f.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">源自江户时代的古法传承 雷门三定天妇罗</p>
+                                    <strong>￥100/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">東京都台東区</p>
+                                    <em>319人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">42</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831ca5a8d241.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">传统日式风味的鳗鱼盖饭 —伊豆榮</p>
+                                    <strong>￥370/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">东京都台东区</p>
+                                    <em>380人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">45</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831cb4022d19.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">银座老店传承着传统味道的天妇罗</p>
+                                    <strong>￥1500/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">东京都中央区银座</p>
+                                    <em>308人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">114</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831cbf8a4c70.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">江户前惠比寿司店 明星也光顾的寿司名店</p>
+                                    <strong>￥130/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">東京都中央区銀座</p>
+                                    <em>670人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <span id='pid' style="display: none;">127</span>
+                    <a href="./details.html">
+                        <div class="i_pic">
+                            <img src="./images/5831ccc02bbb0.jpg" alt="" />
+                            <span class="collection"></span>
+                        </div>
+                        <div class="i_info clear">
+                            <div class="i_info_padding clear">
+                                <div class="price fl">
+                                    <p class="overflow">银座 鮨正</p>
+                                    <strong>￥1300/人</strong>
+                                </div>
+                                <div class="want_go fr">
+                                    <p class="overflow">京都衹园</p>
+                                    <em>3000人想去</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center;width: 100%;display: inline-block;padding: 10px 0px;">&copy;2018 上海尝享网络科技有限公司，网站备案号：
+        <a style="display: inline-block;" href="http://www.miitbeian.gov.cn/" target="_blank">12345678766</a>
+    </p>
+    <div style='clear:both;height:56px;'></div>
+    <!-- 底部导航 -->
+    <ul id="footer_nav">
+        <li class="active">
+            <a href="./index.html">
+                <span class="footer_icon icon1"></span>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="./order.html">
+                <span class="footer_icon icon2"></span>
+                <p>订单</p>
+            </a>
+        </li>
+        <li>
+            <a href="./likes.html">
+                <span class="footer_icon icon3"></span>
+                <p>喜欢</p>
+            </a>
+        </li>
+        <li>
+            <a href="./user.html">
+                <span class="footer_icon icon4"></span>
+                <p>我的</p>
+            </a>
+        </li>
+    </ul>
+    <!-- 底部导航结束 -->
+
+    <!-- 产品轮播 -->
+    <script type="text/javascript">
+        var swiper = new Swiper('.swiper_banner ', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            autoplay: 3000,
+            loop: true
+        });
+        var swiper = new Swiper('.iscroll_1', {
+            slidesPerView: 1.2,
+            paginationClickable: true,
+            spaceBetween: 0,
+            freeMode: true
+        });
+
+    </script>
+</body>
+
+</html>
